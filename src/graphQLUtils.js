@@ -27,6 +27,7 @@ const fetchAllPokemonOperationsDoc = `
       captured
       imgUrl
       pokemonTypes
+      generation
     }
   }
 `

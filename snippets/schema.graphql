@@ -25,4 +25,5 @@ type Pokemon {
   captured: Boolean! @search
   imgUrl: String!
   pokemonTypes: [PokemonType!]! @search
+  generation: String!
 }

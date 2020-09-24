@@ -66,7 +66,10 @@ export function PokemonCard({ pokemon, fetchPokedexData }) {
           {pokemon.name}
         </Typography>
         <Typography color="textSecondary">
-          {pokemon.pokemonTypes.join(', ')}
+          {"Type: " + pokemon.pokemonTypes.join(', ')}
+        </Typography>
+        <Typography color="textSecondary">
+          {"Generation: " + pokemon.generation}
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
