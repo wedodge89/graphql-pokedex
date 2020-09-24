@@ -23,3 +23,4 @@ This pokédex app is heavily inspired by Tyler Hawkins' [app](http://tylerhawkin
 - Add Generation VIII to GraphQL database.
 - Add Alolan forms to GraphQL database.
 - Add Galarian forms to GraphQL database.
+- Add color-coding to type names.

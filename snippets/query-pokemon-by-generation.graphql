@@ -1,0 +1,9 @@
+query GetAllGenIPokemon {
+  queryPokemon(filter: { generation: "I"}) {
+    id
+    name
+    captured
+    imgUrl
+    pokemonTypes
+  }
+}

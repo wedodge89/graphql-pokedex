@@ -27,6 +27,17 @@ const pokemonTypes = [
   'Water',
 ]
 
+const generations = [
+  'I',
+  'II',
+  'III',
+  'IV',
+  'V',
+  'VI',
+  'VII',
+  'VIII'
+]
+
 const useStyles = makeStyles((theme) => ({
   optionsContainer: {
     background: '#FFF',
@@ -47,6 +58,8 @@ export function Filters({
   setPokemonTypeFilter,
   capturedFilter,
   setCapturedFilter,
+  generationFilter,
+  setGenerationFilter
 }) {
   const classes = useStyles()
 
@@ -56,6 +69,10 @@ export function Filters({
 
   const handleCapturedChange = (event) => {
     setCapturedFilter(event.target.value)
+  }
+
+  const handleGenerationChange = (event) => {
+    setGenerationFilter(event.target.value)
   }
 
   return (
@@ -85,6 +102,21 @@ export function Filters({
           <MenuItem value="Any">Any</MenuItem>
           <MenuItem value="Captured">Captured</MenuItem>
           <MenuItem value="Not Captured">Not Captured</MenuItem>
+        </Select>
+      </FormControl>
+      <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel>Generation</InputLabel>
+        <Select
+          value={generationFilter}
+          onChange={handleGenerationChange}
+          label="Generation"
+        >
+          <MenuItem value="Any">Any</MenuItem>
+          {generations.map((generation) => (
+            <MenuItem value ={generation} key = {generation}>
+              {generation}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     </Paper>
