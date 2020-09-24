@@ -7,7 +7,7 @@ This pokédex app is heavily inspired by Tyler Hawkins' [app](http://tylerhawkin
 - Added Generation value to Generation I.
 
 ## In-Progress Improvements
-- Add Generation II to GraphQL database. (152-160)
+- Add Generation II to GraphQL database. (152-169)
 
 ## Planned Improvements
 - Add Generation value to display.
