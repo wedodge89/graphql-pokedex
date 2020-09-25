@@ -10,12 +10,12 @@ This pokédex app is heavily inspired by Tyler Hawkins' [app](http://tylerhawkin
 
 ## In-Progress Improvements
 - Adding ability to sort by Generation
+- Adding Generation III to GraphQL database (252-301).
 
 ## Planned Improvements
 - Add "Evolution Stage" field to GraphQL schema.
 - Add Evolution Stage value to Generation I.
 - Add ability to sort by Evolution Stage.
-- Add Generation III to GraphQL database.
 - Add Generation IV to GraphQL database.
 - Add Generation V to GraphQL database.
 - Add Generation VI to GraphQL database.

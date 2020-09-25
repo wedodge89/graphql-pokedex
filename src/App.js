@@ -37,11 +37,13 @@ export default function App() {
   const [pokedexData, setPokedexData] = React.useState(null)
   const [pokemonTypeFilter, setPokemonTypeFilter] = React.useState('Any')
   const [capturedFilter, setCapturedFilter] = React.useState('Any')
+  const [generationFilter, setGenerationFilter] = React.useState('Any')
 
   const fetchPokedexData = React.useCallback(async () => {
     const { errors, data } = await fetchPokemon({
       pokemonType: pokemonTypeFilter,
       isCaptured: capturedFilter,
+      generation: generationFilter
     })
 
     if (errors) {
@@ -53,7 +55,7 @@ export default function App() {
     )
 
     setPokedexData(result)
-  }, [pokemonTypeFilter, capturedFilter])
+  }, [pokemonTypeFilter, capturedFilter, generationFilter])
 
   React.useEffect(() => {
     fetchPokedexData()
@@ -73,6 +75,8 @@ export default function App() {
               setPokemonTypeFilter={setPokemonTypeFilter}
               capturedFilter={capturedFilter}
               setCapturedFilter={setCapturedFilter}
+              generationFilter={generationFilter}
+              setGenerationFilter={setGenerationFilter}
             />
             <PokemonCardsList
               pokedexData={pokedexData}
