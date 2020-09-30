@@ -45,6 +45,7 @@ const fetchPokemonOfCertainTypeOperationsDoc = (pokemonType) => `
       captured
       imgUrl
       pokemonTypes
+      generation
     }
   }
 `
@@ -53,6 +54,28 @@ function fetchPokemonOfCertainType(pokemonType) {
   return fetchGraphQL(
     fetchPokemonOfCertainTypeOperationsDoc(pokemonType),
     'fetchPokemonOfCertainType',
+    {}
+  )
+}
+
+// Fetch Pokemon by Generation
+const fetchPokemonOfCertainGenerationOperationsDoc = (generation) => `
+  query fetchPokemonOfCertainGeneration {
+    queryPokemon(filter: { generation: { eq: [${generation}] } }) {
+      id
+      name
+      captured
+      imgUrl
+      pokemonTypes
+      generation
+    }
+  }
+`
+
+function fetchPokemonOfCertainGeneration(generation) {
+  return fetchGraphQL(
+    fetchPokemonOfCertainGenerationOperationsDoc(generation),
+    'fetchPokemonOfCertainGeneration',
     {}
   )
 }
@@ -66,6 +89,7 @@ const fetchPokemonByCapturedStatusOperationsDoc = (isCaptured) => `
       captured
       imgUrl
       pokemonTypes
+      generation
     }
   }
 `
@@ -82,6 +106,7 @@ function fetchPokemonByCapturedStatus(isCaptured) {
 const fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc = ({
   pokemonType,
   isCaptured,
+  generation
 }) => `
   query fetchPokemonOfCertainTypeAndByCapturedStatus {
     queryPokemon(filter: { captured: ${isCaptured}, pokemonTypes: { eq: [${pokemonType}] } }) {
@@ -90,6 +115,7 @@ const fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc = ({
       captured
       imgUrl
       pokemonTypes
+      generation
     }
   }
 `
@@ -110,16 +136,19 @@ function fetchPokemonOfCertainTypeAndByCapturedStatus({
 
 // Fetch Pokemon
 // Combines all the cases into a nice single function serving as a facade over the underlying complexity
-export function fetchPokemon({ pokemonType, isCaptured }) {
-  if (pokemonType !== 'Any' && isCaptured !== 'Any') {
+export function fetchPokemon({ pokemonType, isCaptured, generation }) {
+  if (pokemonType !== 'Any' && isCaptured !== 'Any' && generation !== 'Any') {
     return fetchPokemonOfCertainTypeAndByCapturedStatus({
       pokemonType,
       isCaptured: isCaptured === 'Captured',
+      generation
     })
   } else if (pokemonType !== 'Any') {
     return fetchPokemonOfCertainType(pokemonType)
   } else if (isCaptured !== 'Any') {
     return fetchPokemonByCapturedStatus(isCaptured === 'Captured')
+  } else if (generation !== 'Any') {
+    return fetchPokemonOfCertainGeneration(generation)
   }
 
   return fetchAllPokemon()
@@ -138,6 +167,7 @@ const updatePokemonCapturedStatusOperationsDoc = (
         captured
         imgUrl
         pokemonTypes
+        generation
       }
     }
   }

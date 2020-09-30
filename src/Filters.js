@@ -77,6 +77,7 @@ export function Filters({
 
   return (
     <Paper variant="outlined" className={classes.optionsContainer}>
+      
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel>Type</InputLabel>
         <Select
@@ -92,6 +93,7 @@ export function Filters({
           ))}
         </Select>
       </FormControl>
+      
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel>Captured</InputLabel>
         <Select
@@ -104,7 +106,8 @@ export function Filters({
           <MenuItem value="Not Captured">Not Captured</MenuItem>
         </Select>
       </FormControl>
-      <FormControl variant="outlined" className={classes.formControl}>
+      
+      {/* <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel>Generation</InputLabel>
         <Select
           value={generationFilter}
@@ -118,7 +121,8 @@ export function Filters({
             </MenuItem>
           ))}
         </Select>
-      </FormControl>
+      </FormControl> */}
+    
     </Paper>
   )
 }

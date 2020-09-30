@@ -5,5 +5,6 @@ query GetAllCapturedPokemon {
     captured
     imgUrl
     pokemonTypes
+    generation
   }
 }
