@@ -107,7 +107,7 @@ export function Filters({
         </Select>
       </FormControl>
       
-      {/* <FormControl variant="outlined" className={classes.formControl}>
+      <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel>Generation</InputLabel>
         <Select
           value={generationFilter}
@@ -121,7 +121,7 @@ export function Filters({
             </MenuItem>
           ))}
         </Select>
-      </FormControl> */}
+      </FormControl>
     
     </Paper>
   )
