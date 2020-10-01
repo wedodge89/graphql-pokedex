@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/graphql-pokedex/static/css/main.7896c5ac.chunk.css",
-    "main.js": "/graphql-pokedex/static/js/main.9abcb102.chunk.js",
-    "main.js.map": "/graphql-pokedex/static/js/main.9abcb102.chunk.js.map",
+    "main.js": "/graphql-pokedex/static/js/main.1fa5fad6.chunk.js",
+    "main.js.map": "/graphql-pokedex/static/js/main.1fa5fad6.chunk.js.map",
     "runtime-main.js": "/graphql-pokedex/static/js/runtime-main.c5aa9362.js",
     "runtime-main.js.map": "/graphql-pokedex/static/js/runtime-main.c5aa9362.js.map",
     "static/js/2.4974be0d.chunk.js": "/graphql-pokedex/static/js/2.4974be0d.chunk.js",
     "static/js/2.4974be0d.chunk.js.map": "/graphql-pokedex/static/js/2.4974be0d.chunk.js.map",
     "index.html": "/graphql-pokedex/index.html",
-    "precache-manifest.bce60022d6d25b6d16e8a3838afbd59a.js": "/graphql-pokedex/precache-manifest.bce60022d6d25b6d16e8a3838afbd59a.js",
+    "precache-manifest.dace03f9c3f4b46ad477984ec636e712.js": "/graphql-pokedex/precache-manifest.dace03f9c3f4b46ad477984ec636e712.js",
     "service-worker.js": "/graphql-pokedex/service-worker.js",
     "static/css/main.7896c5ac.chunk.css.map": "/graphql-pokedex/static/css/main.7896c5ac.chunk.css.map",
     "static/js/2.4974be0d.chunk.js.LICENSE.txt": "/graphql-pokedex/static/js/2.4974be0d.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c5aa9362.js",
     "static/js/2.4974be0d.chunk.js",
     "static/css/main.7896c5ac.chunk.css",
-    "static/js/main.9abcb102.chunk.js"
+    "static/js/main.1fa5fad6.chunk.js"
   ]
 }
