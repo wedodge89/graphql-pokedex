@@ -71,6 +71,9 @@ export function PokemonCard({ pokemon, fetchPokedexData }) {
         <Typography color="textSecondary">
           {"Generation: " + pokemon.generation}
         </Typography>
+        <Typography color="textSecondary">
+          {"Stage: " + pokemon.evoStage}
+        </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
         <FormControlLabel

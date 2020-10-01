@@ -28,6 +28,7 @@ const fetchAllPokemonOperationsDoc = `
       imgUrl
       pokemonTypes
       generation
+      evoStage
     }
   }
 `
@@ -46,6 +47,7 @@ const fetchPokemonOfCertainTypeOperationsDoc = (pokemonType) => `
       imgUrl
       pokemonTypes
       generation
+      evoStage
     }
   }
 `
@@ -68,6 +70,7 @@ const fetchPokemonOfCertainGenerationOperationsDoc = (generation) => `
       imgUrl
       pokemonTypes
       generation
+      evoStage
     }
   }
 `
@@ -90,6 +93,7 @@ const fetchPokemonByCapturedStatusOperationsDoc = (isCaptured) => `
       imgUrl
       pokemonTypes
       generation
+      evoStage
     }
   }
 `
@@ -116,6 +120,7 @@ const fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc = ({
       imgUrl
       pokemonTypes
       generation
+      evoStage
     }
   }
 `
@@ -168,6 +173,7 @@ const updatePokemonCapturedStatusOperationsDoc = (
         imgUrl
         pokemonTypes
         generation
+        evoStage
       }
     }
   }
