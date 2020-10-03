@@ -29,6 +29,7 @@ const fetchAllPokemonOperationsDoc = `
       pokemonTypes
       generation
       evoStage
+      altForm
     }
   }
 `
@@ -48,6 +49,7 @@ const fetchPokemonOfCertainTypeOperationsDoc = (pokemonType) => `
       pokemonTypes
       generation
       evoStage
+      altForm
     }
   }
 `
@@ -71,6 +73,7 @@ const fetchPokemonOfCertainGenerationOperationsDoc = (generation) => `
       pokemonTypes
       generation
       evoStage
+      altForm
     }
   }
 `
@@ -94,6 +97,7 @@ const fetchPokemonByCapturedStatusOperationsDoc = (isCaptured) => `
       pokemonTypes
       generation
       evoStage
+      altForm
     }
   }
 `
@@ -121,6 +125,7 @@ const fetchPokemonOfCertainTypeAndByCapturedStatusOperationsDoc = ({
       pokemonTypes
       generation
       evoStage
+      altForm
     }
   }
 `
@@ -161,27 +166,28 @@ export function fetchPokemon({ pokemonType, isCaptured, generation }) {
 
 // Update the Pokemon Captured Status
 const updatePokemonCapturedStatusOperationsDoc = (
-  pokemonId,
+  pokemonName,
   newIsCapturedValue
 ) => `
-  mutation updatePokemonCapturedStatus {
-    updatePokemon(input: {filter: {id: {eq: ${pokemonId}}}, set: {captured: ${newIsCapturedValue}}}) {
+  mutation MyMutation(captured: newIsCapturedValue) {
+    updatePokemon(input: {filter: {name: {alloftext: ${pokemonName}}}, set: {captured: ${newIsCapturedValue}}}) {
       pokemon {
-        id
-        name
+        altForm
         captured
-        imgUrl
-        pokemonTypes
-        generation
         evoStage
+        generation
+        id
+        imgUrl
+        name
+        pokemonTypes
       }
     }
   }
 `
 
-export function updatePokemonCapturedStatus(pokemonId, newIsCapturedValue) {
+export function updatePokemonCapturedStatus(pokemonName, newIsCapturedValue) {
   return fetchGraphQL(
-    updatePokemonCapturedStatusOperationsDoc(pokemonId, newIsCapturedValue),
+    updatePokemonCapturedStatusOperationsDoc(pokemonName, newIsCapturedValue),
     'updatePokemonCapturedStatus',
     {}
   )

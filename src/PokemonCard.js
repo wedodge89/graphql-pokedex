@@ -55,7 +55,7 @@ export function PokemonCard({ pokemon, fetchPokedexData }) {
           color="textSecondary"
           gutterBottom
         >
-          {pokemon.id}
+          {pokemon.id}{pokemon.altForm}
         </Typography>
         <img
           alt={pokemon.name}
