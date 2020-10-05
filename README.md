@@ -6,6 +6,7 @@ This pokédex app is heavily inspired by Tyler Hawkins' [app](http://tylerhawkin
 - Added "Generation" and "Evolution Stage" fields to GraphQL schema.
 - Added Generation value to all generations.
 - Added all 8 generations of pokémon.
+- Added Mega, Alolan, Galarian, and Gigantamax forms.
 - Added Generation and Evolution Stage to display.
 
 ## In-Progress Improvements
@@ -14,8 +15,5 @@ This pokédex app is heavily inspired by Tyler Hawkins' [app](http://tylerhawkin
 
 ## Planned Improvements
 - Add ability to sort by Evolution Stage.
-- Add Mega Evolutions to GraphQL database.
-- Add Alolan forms to GraphQL database.
-- Add Galarian forms to GraphQL database.
-- Add Gigantamax forms to GraphQL database.
+- Add alternate forms to GraphQL database
 - Add color-coding to type names.
